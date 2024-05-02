@@ -4,6 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
+OUTPUT_FOLDER = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),'output')
+
 def read_data(file_name):
     '''
     Convert active sheet of Screener.in file to csv file to obtain values
@@ -100,6 +102,7 @@ def generate_operating_profit_margin(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_operating_profit_margin.jpg"),format="jpg")
     plt.show()
 
 def visualize_depreciation(df):
@@ -135,6 +138,7 @@ def visualize_depreciation(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_depreciation.jpg"),format="jpg")
     plt.show()
 
 
@@ -175,6 +179,7 @@ def visualize_interest_expense(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_interest_expense.jpg"),format="jpg")
     plt.show()
     
 def visualize_net_profit_margin(df):
@@ -232,6 +237,7 @@ def visualize_net_profit_margin(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_net_profit_margin.jpg"),format="jpg")
     plt.show()
     
 def visualize_EPS(df):
@@ -276,6 +282,7 @@ def visualize_EPS(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_EPS.jpg"),format="jpg")
     plt.show()
     
 def main():

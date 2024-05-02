@@ -4,6 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
+OUTPUT_FOLDER = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),'output')
+
 def read_balance_sheet_data(file_name):
     '''
     Convert active sheet of Screener.in file to csv file to obtain values
@@ -94,6 +96,7 @@ def visualize_debt_to_equity_ratio(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_debt_to_equity_ratio.jpg"),format="jpg")
     plt.show()
     
 def visualize_return_on_equity(df):
@@ -141,6 +144,7 @@ def visualize_return_on_equity(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_return_on_equity.jpg"),format="jpg")
     plt.show()
     
 def visualize_return_on_capital_employed(df):
@@ -199,6 +203,7 @@ def visualize_return_on_capital_employed(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_return_on_capital_employed.jpg"),format="jpg")
     plt.show()
     
 def visualize_debtor_days(df):
@@ -236,6 +241,7 @@ def visualize_debtor_days(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_debtor_days.jpg"),format="jpg")
     plt.show()
     
 def visualize_inventory_turnover(df):
@@ -287,6 +293,7 @@ def visualize_inventory_turnover(df):
     plt.grid(True, linestyle='--', alpha=0.7)
 
     plt.tight_layout()
+    plt.savefig(os.path.join(OUTPUT_FOLDER,"reliance_inventory_turner.jpg"),format="jpg")
     plt.show()
 
 def main():
